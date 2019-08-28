@@ -15,15 +15,19 @@ course_planning = xml_general.read_course_planning(directory = r"D:\Stack\Geo-IC
 # the dataframe with information needed for the website
 geoict_df = xml_general.create_geoict_df(information_df = course_information, planning_df = course_planning)
 
+# write the geoict dataframe to a CSV file for importing at the website
+geoict_df.to_csv(r"D:\Stack\Geo-ICT\Trainingen\repo\courses-xml\cursusinformatie.csv",
+                 sep = ";", index = False)
+
 from lxml import etree
 import os
 root = etree.Element('events')
 
-for event in geoict_df.eventid:
+for event in geoict_df.id:
     event_node = etree.SubElement(root, 'event')
     for column in ['cursusnaam', 'tekst', 'datum']:
         info_node = etree.SubElement(event_node, column)
-        info_node.text = geoict_df.loc[geoict_df.eventid == event, column].values[0]
+        info_node.text = geoict_df.loc[geoict_df.id == event, column].values[0]
 
 created_tree = etree.ElementTree(root)
 output_directory = r"D:\Stack\Geo-ICT\Trainingen\repo\courses-xml"
