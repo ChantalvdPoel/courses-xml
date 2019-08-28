@@ -1,0 +1,12 @@
+##Onderdelen in de geo-ict.nl xml
+
+cursusnaam # als cursusnaam
+cursusid
+omschrijving
+duur
+duureenheid
+prijs
+eventid  # als id
+locatie
+tekst  # de samengestelde tekst per cursus event, als tekst
+startdatum # als datum
