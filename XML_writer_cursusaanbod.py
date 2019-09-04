@@ -5,7 +5,6 @@ import numpy as np
 from datetime import datetime
 
 import xml_general
-#import xml_springest
 
 course_information = xml_general.read_course_information(directory = r"D:\Stack\Geo-ICT\Trainingen\repo\courses-xml",
                                                          filename = "Cursussen database.xlsx")
@@ -19,30 +18,7 @@ geoict_df = xml_general.create_geoict_df(information_df = course_information, pl
 geoict_df.to_csv(r"D:\Stack\Geo-ICT\Trainingen\repo\courses-xml\cursusinformatie.csv",
                  sep = ";", index = False)
 
-from lxml import etree
-import os
-root = etree.Element('events')
+# make the xml file for springest
 
-for event in geoict_df.id:
-    event_node = etree.SubElement(root, 'event')
-    for column in ['cursusnaam', 'tekst', 'datum']:
-        info_node = etree.SubElement(event_node, column)
-        info_node.text = geoict_df.loc[geoict_df.id == event, column].values[0]
-
-created_tree = etree.ElementTree(root)
-output_directory = r"D:\Stack\Geo-ICT\Trainingen\repo\courses-xml"
-output_filename = "geoict.xml"
-created_tree.write(open(os.path.join(output_directory, output_filename), 'wb'),
-                    pretty_print=True, 
-                    encoding = 'utf-8',
-                    xml_declaration = True)
-
-#course_information_springest = xml_springest.course_information_format_springest(course_information)
-#course_planning_springest = xml_springest.course_planning_format_springest(course_planning)
-
-#xml_springest.create_xml_springest(course_information_df = course_information_springest,
-#                                   course_planning_df = course_planning_springest,
-#                                   output_directory = "D:\Stack\Geo-ICT\Trainingen",
-#                                   output_filename = "output_springest.xml")
 
 

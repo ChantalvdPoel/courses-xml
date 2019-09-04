@@ -17,7 +17,7 @@ def read_course_information(directory, filename):
                                        dtype=str,
                                        usecols = ['CursusID', 'Cursusnaam', 'Omschrijving', 'Prijs',
                                                   'Extra_kosten', 'Omschrijving_extra_kosten', 'Duur', 
-                                                  'Duur_eenheid', 'URL', 'PDF_URL'])
+                                                  'Duur_eenheid', 'URL', 'PDF_URL', 'Frequentie'])
     course_information.fillna(0, inplace = True)
 
     return course_information
@@ -35,8 +35,8 @@ def read_course_planning(directory, filename):
                                     dtype = str)
     
     # Convert date notation
-    date_to_datetime = [datetime.strptime(str(course_planning.Datum[idx]), '%d-%m-%Y') for idx in range(len(course_planning))]
-    course_planning.Datum = [date_to_datetime[idx].strftime('%Y-%m-%d') for idx in range(len(date_to_datetime))]
+    #date_to_datetime = [datetime.strptime(str(course_planning.Datum[idx]), '%d-%m-%Y') for idx in range(len(course_planning))]
+    #course_planning.Datum = [date_to_datetime[idx].strftime('%Y-%m-%d') for idx in range(len(date_to_datetime))]
 
     # Convert time notation
     for tijd in ['Begintijd', 'Eindtijd']:
@@ -70,7 +70,8 @@ def create_geoict_df(information_df, planning_df):
     # so if course1 is planned on 1, 2 and 3 January and again on 1, 2 and 3 February, then this course has two events,
     # where event1 = 1,2,3 January and event2 = 1,2,3 February
 
-    for event_idx in range(len(pd.unique(planning_df.EventID))): # for every event that is in the planning
+    count_events = len(pd.unique(planning_df.EventID))
+    for event_idx in range(count_events): # for every event that is in the planning
         event_ID =  pd.unique(planning_df.EventID)[event_idx] # the event ID
         geoict_df.loc[event_idx, 'id'] = event_ID # fill in the event ID in the geoict dataframe
 
@@ -114,5 +115,19 @@ def create_geoict_df(information_df, planning_df):
         geoict_df.loc[event_idx, 'tekst'] = text # fill in the text in the geoict dataframe
 
         geoict_df.loc[event_idx, 'locatie'] = event_place
+
+    # add the courses to the dataframe that are on call (op afroep) 
+    courses_calls = information_df.loc[information_df.Frequentie == 'op afroep', ['CursusID', 'Cursusnaam']].reset_index(drop = True)
+    count_calls = len(courses_calls)
+
+    for call_idx in range(count_calls):
+
+        geoict_df.loc[count_events+call_idx, 'id'] = courses_calls.loc[call_idx, 'CursusID'] + '_opafroep'
+
+        geoict_df.loc[count_events+call_idx, 'cursusnaam'] = courses_calls.loc[call_idx, 'Cursusnaam']
+
+        geoict_df.loc[count_events+call_idx, 'tekst'] = 'op afroep'
+
+        geoict_df.loc[count_events+call_idx, 'datum'] = '2099-12-31'
 
     return geoict_df
