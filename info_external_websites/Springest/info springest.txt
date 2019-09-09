@@ -7,8 +7,6 @@ Wachtwoord: JelFieDia123$
 
 Contact via: datasupport@springest.nl
 
--> zelf geen contact via hun gekregen, beter om een andere manier te zoeken als er hulp nodig is
-
 ######################
 
 Op https://help.admin.springest.nl/category/603-aanbod-automatisch-importeren al veel hulpmiddelen te vinden voor het opzetten van de XML

@@ -17,7 +17,7 @@ def read_course_information(directory, filename):
                                        dtype=str,
                                        usecols = ['CursusID', 'Cursusnaam', 'Omschrijving', 'Prijs',
                                                   'Extra_kosten', 'Omschrijving_extra_kosten', 'Duur', 
-                                                  'Duur_eenheid', 'URL', 'PDF_URL', 'Frequentie'])
+                                                  'Duur_eenheid', 'URL', 'PDF_URL', 'Frequentie', 'Max_deelnemers'])
     course_information.fillna(0, inplace = True)
 
     return course_information

@@ -21,10 +21,10 @@ def create_cursusdatums_website(information_df, planning_df, output_directory, o
     geoict_df = xml_general.create_geoict_df(information_df = information_df, planning_df = planning_df)
     geoict_df.to_csv(os.path.join(output_directory, output_filename), sep = ";", index = False)
 
-create_cursusdatums_website(information_df = course_information, 
-                            planning_df = course_planning, 
-                            output_directory = r"D:\Stack\Geo-ICT\Trainingen\repo\courses-xml\output",
-                            output_filename = "cursusdatums.csv")
+#create_cursusdatums_website(information_df = course_information, 
+#                            planning_df = course_planning, 
+#                            output_directory = r"D:\Stack\Geo-ICT\Trainingen\repo\courses-xml\output",
+#                            output_filename = "cursusdatums.csv")
 
 course_information_springest = xml_springest.course_information_format_springest(course_information)
 course_planning_springest = xml_springest.course_planning_format_springest(course_planning)

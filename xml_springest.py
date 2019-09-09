@@ -109,7 +109,7 @@ def springest_create_schedules(parent, local_ID, table_info, table_planning, dur
         new_event_enddateismonth.text = 'false'
 
         new_event_startguaranteed = etree.SubElement(new_event_child, 'StartGuaranteed')
-        new_event_startguaranteed.text = 'true'
+        new_event_startguaranteed.text = 'false'
 
         new_schedule = etree.SubElement(new_event_child, 'Schedule') # create the Schedule node
         for days in range(int(duration)): # for the duration of the course, add new Coursedays
@@ -121,7 +121,7 @@ def springest_create_schedules(parent, local_ID, table_info, table_planning, dur
                                                       table = table_planning,
                                                       startday_index = startdays[i])
             name_courseday = etree.Element('Name')
-            name_courseday.text = etree.CDATA('Cursusdag ' + str(days+1))
+            name_courseday.text = 'Cursusdag ' + str(days+1)
             new_courseday.insert(3, name_courseday)
 
 
