@@ -1,0 +1,384 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- TYPES -->
+  <xs:complexType name="LiveSessionDatesType">
+    <xs:sequence>
+      <xs:element name="LiveSessionDate" maxOccurs="unbounded" minOccurs="0">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="StartDate">
+              <xs:simpleType>
+                <xs:restriction base="xs:date">
+                  <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="StartTime">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:length value="5"/>
+                  <xs:pattern value="[0-9]{2}:[0-9]{2}"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="EndTime">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:length value="5"/>
+                  <xs:pattern value="[0-9]{2}:[0-9]{2}"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IDType">
+    <xs:sequence>
+      <xs:element name="ID" type="xs:ID"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LiveSessionType">
+    <xs:complexContent>
+      <xs:extension base="IDType">
+        <xs:choice>
+          <xs:sequence>
+            <xs:element name="LocationName" type="xs:string" minOccurs="0"/>
+            <xs:element name="Location" type="xs:string"/>
+            <xs:element name="LiveSessionClosed" type="xs:boolean"/>
+            <xs:element name="LiveSessionDates" type="LiveSessionDatesType"/>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:element name="Url" type="AbsoluteURI"/>
+            <xs:element name="LiveSessionClosed" type="xs:boolean"/>
+            <xs:element name="LiveSessionDates" type="LiveSessionDatesType"/>
+          </xs:sequence>
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="AbsoluteURI">
+    <xs:restriction base="xs:anyURI">
+      <xs:pattern value="([http|https].*)?"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- END TYPES -->
+  <xs:element name="Products">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Product" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="ID" type="xs:ID"/>
+              <xs:element name="Name" type="xs:string"/>
+              <xs:element name="Description" type="xs:string"/>
+              <xs:element name="Agenda" type="xs:string" minOccurs="0"/>
+              <xs:element name="TargetEducationalLevel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="MBO"/>
+                    <xs:enumeration value="HBO"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Language">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="2"/>
+                    <xs:pattern value="[a-z]{2}"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TrainingPriceExVAT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:float">
+                    <xs:minInclusive value="0"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VATPercentage">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="0"/>
+                    <xs:enumeration value="9"/>
+                    <xs:enumeration value="21"/>
+                    <xs:enumeration value="exempted_from_vat"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Certificate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                      <xs:enumeration value="NIBHV"/>
+                      <xs:enumeration value="NIKTA"/>
+                      <xs:enumeration value="NVB "/>
+                      <xs:enumeration value="VCA infra"/>
+                      <xs:enumeration value="DNV-GL/ SVWOH"/>
+                      <xs:enumeration value="NBCE"/>
+                      <xs:enumeration value="CKB"/>
+                      <xs:enumeration value="SIR"/>
+                      <xs:enumeration value="TCVT"/>
+                      <xs:enumeration value="VCA Nederland"/>
+                      <xs:enumeration value="Lean Competency System"/>
+                      <xs:enumeration value="Het Oranje Kruis"/>
+                      <xs:enumeration value="AXELOS"/>
+                      <xs:enumeration value="Certificaat opleider"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EducationalPoints" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EducationalPoint" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="Points">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:integer">
+                                <xs:minInclusive value="0"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="OrganizationShortName">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:enumeration value="ADR International Register"/>
+                                <xs:enumeration value="AEDES"/>
+                                <xs:enumeration value="BureauBTV"/>
+                                <xs:enumeration value="CRKBO"/>
+                                <xs:enumeration value="CDFD"/>
+                                <xs:enumeration value="ECDL"/>
+                                <xs:enumeration value="HOK"/>
+                                <xs:enumeration value="IIA"/>
+                                <xs:enumeration value="KIWA"/>
+                                <xs:enumeration value="AG"/>
+                                <xs:enumeration value="KNB"/>
+                                <xs:enumeration value="Kwaliteitsregister V&amp;V"/>
+                                <xs:enumeration value="MfN"/>
+                                <xs:enumeration value="NBA"/>
+                                <xs:enumeration value="NOAB"/>
+                                <xs:enumeration value="NOvA"/>
+                                <xs:enumeration value="NOBCO"/>
+                                <xs:enumeration value="NVAS"/>
+                                <xs:enumeration value="NIRPA"/>
+                                <xs:enumeration value="NIMA"/>
+                                <xs:enumeration value="Norea"/>
+                                <xs:enumeration value="PMI"/>
+                                <xs:enumeration value="Register Financieel Management"/>
+                                <xs:enumeration value="Registerleraar"/>
+                                <xs:enumeration value="Registerplein"/>
+                                <xs:enumeration value="VRC"/>
+                                <xs:enumeration value="KBvG"/>
+                                <xs:enumeration value="Code 95"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="QualityMarks" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="QualityMark" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="Name">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                  <xs:enumeration value="ISO Register"/>
+                                  <xs:enumeration value="Microsoft Learning Partner"/>
+                                  <xs:enumeration value="NIBHV"/>
+                                  <xs:enumeration value="NRTO"/>
+                                  <xs:enumeration value="CEDEO"/>
+                                  <xs:enumeration value="CRKBO Instelling"/>
+                                  <xs:enumeration value="Mediatorsfederatie Nederland"/>
+                                  <xs:enumeration value="NOvA"/>
+                                  <xs:enumeration value="Nederlandse Associatie voor Examinering"/>
+                                  <xs:enumeration value="STIBEX"/>
+                                  <xs:enumeration value="CRKBO Docent"/>
+                                  <xs:enumeration value="NIMA Education Partner"/>
+                                  <xs:enumeration value="NOBCO"/>
+                                  <xs:enumeration value="NVNLP"/>
+                                  <xs:enumeration value="SNRO"/>
+                                  <xs:enumeration value="Cpion"/>
+                                  <xs:enumeration value="De European Mentoring &amp; Coaching Council (EMCC)"/>
+                                  <xs:enumeration value="StiR"/>
+                                  <xs:enumeration value="noloc"/>
+                                  <xs:enumeration value="Pearson"/>
+                                  <xs:enumeration value="TalentLens"/>
+                                  <xs:enumeration value="NOBTRA"/>
+                                  <xs:enumeration value="Society of NLP"/>
+                                  <xs:enumeration value="Stichting Kwaliteitsregister Jeugd, SKJ"/>
+                                  <xs:enumeration value="Registerplein"/>
+                                  <xs:enumeration value="KIWA"/>
+                                  <xs:enumeration value="VCA infra"/>
+                                  <xs:enumeration value="DNV-GL"/>
+                                  <xs:enumeration value="DEKRA"/>
+                                  <xs:enumeration value="SIR"/>
+                                  <xs:enumeration value="ISO9001"/>
+                                  <xs:enumeration value="TCVT"/>
+                                  <xs:enumeration value="AXELOS"/>
+                                  <xs:enumeration value="Peoplecert"/>
+                                  <xs:enumeration value="EXIN"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="AdditionalCosts" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="AdditionalCost" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element type="xs:string" name="Type"/>
+                          <xs:element name="AdditionalCostPriceExVAT">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:float">
+                                <xs:minInclusive value="0"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="VATPercentage">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:integer">
+                                <xs:enumeration value="0"/>
+                                <xs:enumeration value="9"/>
+                                <xs:enumeration value="21"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Trainers" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Trainer" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Name"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Category">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                      <xs:enumeration value="Arbo &amp; Veiligheid"/>
+                      <xs:enumeration value="Automatisering &amp; ICT/IT"/>
+                      <xs:enumeration value="Communicatie"/>
+                      <xs:enumeration value="Financieel"/>
+                      <xs:enumeration value="HR"/>
+                      <xs:enumeration value="Inkoop &amp; Logistiek"/>
+                      <xs:enumeration value="Internet &amp; Media"/>
+                      <xs:enumeration value="Juridisch"/>
+                      <xs:enumeration value="Kwaliteit &amp; Projectmanagement"/>
+                      <xs:enumeration value="Management"/>
+                      <xs:enumeration value="Marketing"/>
+                      <xs:enumeration value="Opleiding &amp; Onderwijs"/>
+                      <xs:enumeration value="Persoonlijke Effectiviteit"/>
+                      <xs:enumeration value="Productie, Techniek &amp; Bouw"/>
+                      <xs:enumeration value="Sales"/>
+                      <xs:enumeration value="Secretarieel &amp; Administratief"/>
+                      <xs:enumeration value="Sport &amp; Vitaliteit"/>
+                      <xs:enumeration value="Taalcursus"/>
+                      <xs:enumeration value="Vastgoed &amp; Makelaardij"/>
+                      <xs:enumeration value="Zorg &amp; Verzorging"/>
+                      <xs:enumeration value="Overig"/>
+                      <xs:enumeration value="translation missing: nl.training_provider.categories.coaching"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubCategory" type="xs:string"/>
+              <xs:element name="Duration" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                    <xs:minExclusive value="0"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DurationUnit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="minutes"/>
+                    <xs:enumeration value="hours"/>
+                    <xs:enumeration value="days"/>
+                    <xs:enumeration value="weeks"/>
+                    <xs:enumeration value="months"/>
+                    <xs:enumeration value="years"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WebAddress" type="AbsoluteURI" minOccurs="0"/>
+              <xs:element name="PdfBrochure" type="AbsoluteURI" minOccurs="0"/>
+              <xs:element name="ScheduleType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="scheduled"/>
+                    <xs:enumeration value="nodate"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Discounts" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Discount" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:integer" name="CompanyID"/>
+                          <xs:element type="xs:float" name="Price"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RequiredUserFields" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Field" maxOccurs="unbounded" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="gender"/>
+                          <xs:enumeration value="phone_number"/>
+                          <xs:enumeration value="company_role"/>
+                          <xs:enumeration value="date_of_birth"/>
+                          <xs:enumeration value="address"/>
+                          <xs:enumeration value="postal_code"/>
+                          <xs:enumeration value="house_number"/>
+                          <xs:enumeration value="city"/>
+                          <xs:enumeration value="place_of_birth"/>
+                          <xs:enumeration value="employee_number"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LiveSessions">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="LiveSession" type="LiveSessionType" maxOccurs="unbounded" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

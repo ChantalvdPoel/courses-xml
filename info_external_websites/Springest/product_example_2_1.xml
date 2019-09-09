@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Products>
+    <Product>
+        <ID>COM-123</ID>
+        <Name><![CDATA[XML for Dummies]]></Name> <!-- Put CDATA in front of Name & Description so we avoid any html issues -->
+        <Description><![CDATA[<h2>Result</h2><p>After completion of this training <strong>XML</strong> you will be able to make and deliver this to others.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet ante at enim vestibulum accumsan. Nulla condimentum dui at erat laoreet id commodo neque lacinia. Ut ac arcu ante. Nam libero mauris, euismod eu vestibulum non, volutpat ac leo. Aenean leo eros, rutrum at mollis iaculis, aliquam et ante. Proin lobortis, orci id rutrum pharetra, lorem elit suscipit lacus, id accumsan lacus quam ac purus. Vestibulum dignissim congue augue, sit amet vehicula diam commodo a. Donec tristique, dolor ac facilisis mattis, dui purus tempor ligula, in aliquet odio mi id quam. Maecenas lacinia accumsan ipsum, eget tincidunt mi dictum aliquam. Phasellus semper justo augue. Ut facilisis mauris metus. Nunc non odio quis lorem sodales malesuada non id sem. Sed euismod convallis mi, in adipiscing lorem dignissim nec. Donec luctus est ut diam tincidunt facilisis ornare massa molestie. Vivamus sodales urna in ligula commodo ut blandit lacus euismod. Nulla feugiat mattis mauris nec mattis. Nam non risus eros, id elementum lectus. Fusce a erat urna, ut consequat diam. Suspendisse potenti.</p>]]></Description>
+        <!-- Description must have a minimum of 150 words -->
+        <Images>
+            <ImageUrl></ImageUrl> <!-- Escaped characters are not allowed,uncoded URL is required -->
+        </Images>
+        <VideoEmbed></VideoEmbed><!-- Put any YouTube or Vimeo URL --> 
+        <Language>nl</Language><!-- You can select one alpha 2 language code from this list: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes -->
+        <Price>399</Price> <!-- can be with komma or dot; 399.00 or 399,00. Always in € -->
+        <VatIncluded>no</VatIncluded> <!-- no or exempt -->
+        <VatAmount>83.79</VatAmount> <!-- vat amount of price -->
+        <PriceExemptAmount>499</PriceExemptAmount> <!-- Optinial field for Price Amount exempt vat -->
+        <PricePeriod>all</PricePeriod> <!-- If the price is all, yearly, monthly, daily -->
+        <PriceAgreement>true</PriceAgreement> <!-- true if there will be an agreement between provider and applicant -->
+        <AdditionalCosts>
+            <AdditionalCost>
+                <Type>accommodation</Type>
+                <TypeOther></TypeOther><!-- Free input for cost type 'other' -->
+                <Price>50</Price>
+                <VatIncluded>no</VatIncluded> <!-- no or exempt -->
+                <VatAmount>5</VatAmount>
+                <PriceExemptAmount>55</PriceExemptAmount> <!-- can be used to provide an alternative price that is VAT exempt -->
+                <VATExemptAmount>5</VATExemptAmount>
+                <Mandatory>true</Mandatory> <!-- Define if the additional cost is mandatory or optional. Boolean: true or false -->
+            </AdditionalCost>
+            <AdditionalCost>
+                <Type>other</Type>  <!-- only use value 'other' in conjuction with TypeOther(below) to specify own costtype-->
+                <TypeOther>Extra costs for exams</TypeOther><!-- Free input for cost type 'other' -->
+                <Price>10</Price>
+                <VatIncluded>no</VatIncluded> <!-- no or exempt -->
+                <VatAmount>1</VatAmount>
+                <PriceExemptAmount>11</PriceExemptAmount>
+                <VATExemptAmount>1</VATExemptAmount>
+                <Mandatory>true</Mandatory> <!-- Define if the additional cost is mandatory or optional. Boolean: true or false -->
+            </AdditionalCost>
+        </AdditionalCosts>
+        <PriceComplete>true</PriceComplete> <!-- If the price + the sum of additional costs cover the total cost of the product. Boolean: true or false -->
+        <PriceInfo></PriceInfo> <!-- Any information about the price -->
+        <Trainers>
+          <Trainer>
+            <Email></Email>
+          </Trainer>
+          <Trainer>
+            <Email></Email>
+          </Trainer>
+        </Trainers>
+        <CourseType>course</CourseType>
+        <Duration>2</Duration>
+        <DurationUnit>days</DurationUnit> <!-- Choose only one option: hours, days, weeks, months or years -->
+        <DurationAgreement>true</DurationAgreement> <!-- true if there will be an agreement between provider and applicant -->
+        <Runtime></Runtime>
+        <Completion>Official PRINCE2 certificat</Completion>
+        <ExtraInstructionsAfterBooking>The location will be shared via email 10 weeks before the startdate</ExtraInstructionsAfterBooking> <!-- Add a description, that will be included in the email to the participant after he or she booked-->
+        <MaxParticipants>12</MaxParticipants> <!-- value can never be 0. When 0 no new bookings are possible for this course since we see it as full --><ParticipantsAgreement>true</ParticipantsAgreement> <!-- true if there will be an agreement between provider and applicant -->
+        <WebAddress>http://www.domain.co.uk/xmlfordummies.html</WebAddress>
+        <PdfBrochure></PdfBrochure> <!-- Put the URL to the pdf-brochure -->
+        <ContactPerson>
+            <Name>Dagmar Stigter-Kling</Name>
+            <Telephone>+31(0)318-501119</Telephone>
+            <EmailAddress>accountteamkenniscentrum@infosupport.com</EmailAddress>
+        </ContactPerson>
+        <ProductType>group</ProductType> <!-- Choose only one option: home, open, incompany, elearning, books, event, learning_bite -->
+        <AllowedSites>
+            <Go>stork</Go>
+        </AllowedSites>
+        <Regions> <!-- Use for each region a new node -->
+            <Region>
+                <Country></Country>
+                <Name></Name>
+            </Region>
+            <Region>
+                <Country></Country>
+                <Name></Name>
+            </Region>
+        </Regions>
+        <Level>MBO</Level>
+        <CrohoID>12342</CrohoID>
+        <CreboID>23124</CreboID>
+        <PriceDiscounts> 
+            <Discount> 
+                <Go>alliander</Go>  <!-- contact datasupport@springest.com if some GO names are missing -->
+                <Percentage>25</Percentage> 
+            </Discount> 
+            <Discount> 
+                <Go>vattenfall_nl</Go> 
+                <Percentage>30</Percentage> 
+            </Discount> 
+        </PriceDiscounts>
+        <PePoints>
+            <PePoint>
+                <Organisation>Nederlandse Orde van Advocaten</Organisation>
+                <PointType>PE</PointType>
+                <Points>8</Points>
+            </PePoint>
+             <PePoint>
+                <Organisation>Het Oranje Kruis</Organisation>
+                <PointType>PO</PointType>
+                <Points>10</Points>
+            </PePoint>
+        </PePoints>
+        <Moments>
+            <Moment><!-- Use for each option a new node: morning, evening, daytime, saturday, weekend. -->
+                <Name>daytime</Name>
+            </Moment>
+        </Moments>
+        <StartingDatePlaces>
+            <StartingDatePlace>
+                <ID>sd-1</ID> <!-- Include a unqiue ID for each startdate -->
+                <Startdate>2014-08-24</Startdate> 
+                <Place>Amsterdam</Place>
+                <StartdateIsMonthOnly>false</StartdateIsMonthOnly>
+                <Enddate>2014-09-24</Enddate>
+                <EnddateIsMonthOnly>false</EnddateIsMonthOnly> <!-- If the exact start or end date is not known, but the month is. For example: If product starts in Januari 2014, please submit a valid Date like 01-01-2014 and DateIsMonthOnly is true-->
+                <MinNumberOfSeats>10</MinNumberOfSeats>
+                <MaxNumberOfSeats>20</MaxNumberOfSeats>
+                <StartGuaranteed>true</StartGuaranteed> <!-- If the startdate is guaranteed: true or false -->
+                <Schedule> <!-- Add a schedule to each startdate -->
+                    <Courseday>
+                        <Date>2014-08-24</Date>
+                        <Place>Amsterdam</Place>
+                        <Name>Day 1</Name>
+                        <StartTime>8:00</StartTime>
+                        <EndTime>16:00</EndTime>
+                    </Courseday>
+                    <Courseday>
+                        <Date>2014-09-24</Date>
+                        <Place>Amsterdam</Place>
+                        <Name>Day 2</Name>
+                        <StartTime>8:00</StartTime>
+                        <EndTime>16:00</EndTime>
+                    </Courseday>
+                </Schedule>
+            </StartingDatePlace>
+            <StartingDatePlace>
+                <ID>sd-1</ID> <!-- Include a unqiue ID for each startdate -->
+                <Startdate>2014-09-24</Startdate>
+                <Place>Rotterdam</Place>
+                <StartdateIsMonthOnly>false</StartdateIsMonthOnly>
+                <Enddate>2014-10-24</Enddate>
+                <EnddateIsMonthOnly>false</EnddateIsMonthOnly> <!-- If the exact date is not known, but the month is. For example: If product starts in Januari 2014, please submit a valid Date like 01-01-2014 and DateIsMonthOnly is true-->
+                <MinNumberOfSeats>10</MinNumberOfSeats>
+                <MaxNumberOfSeats>20</MaxNumberOfSeats>
+                <StartGuaranteed>false</StartGuaranteed> <!-- If the startdate is guaranteed: true or false -->
+                <Schedule> <!-- Add a schedule to each startdate -->
+                    <Courseday>
+                        <Date>2014-09-24</Date>
+                        <Place>Rotterdam</Place>
+                        <Name>Day 1</Name>
+                        <StartTime></StartTime>
+                        <EndTime></EndTime>
+                    </Courseday>
+                    <Courseday>
+                        <Date>2014-10-24</Date>
+                        <Place>Rotterdam</Place>
+                        <Name>Day 1</Name>
+                        <StartTime></StartTime>
+                        <EndTime></EndTime>
+                    </Courseday>
+                </Schedule>
+            </StartingDatePlace>
+        </StartingDatePlaces>
+        <customLtiParams>
+            <customLtiParam>
+                <key>course_id</key>
+                <value>511</value>
+            </customLtiParam>
+        </customLtiParams>
+    </Product>
+</Products>

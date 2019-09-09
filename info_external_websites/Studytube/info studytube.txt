@@ -1,0 +1,15 @@
+LOG-IN:
+https://login.studytube.nl/?back_link=https://provider.studytube.nl/
+Gebruikersnaam: anton.schutte@geo-ict.nl
+Wachtwoord: JelFieDia123$
+
+################################
+
+Contact via: opleidersupport@studytube.nl
+
+################################
+
+trainings_template (xml document): voorbeeld van het XML bestand 
+
+trainings_template_xsd (xml document): de xsd waar de gemaakte XML aan moet voldoen
+(op websites zoals https://xmlvalidation.com/ kan de XML tegen de XSD getest worden)

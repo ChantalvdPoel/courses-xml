@@ -24,13 +24,14 @@ def course_information_format_springest(course_information_df):
                                                                             'Omschrijving_extra_kosten': 'AdditionalCosts_description',
                                                                             'Duur': 'Duration',
                                                                             'Duur_eenheid': 'Duration_unit',
+                                                                            'Max_deelnemers': 'MaxParticipants',
                                                                             'URL': 'WebAddress',
                                                                             'PDF_URL': 'PdfBrochure'})
 
     # add columns with fixed values
     fixed_values = pd.DataFrame({'columnname': ['Language', 'VatIncluded', 'PricePeriod', 'PriceComplete',
-                                                'CourseType', 'Completion', 'MaxParticipants', 'ProductType'],
-                                 'value': ['nl', 'no', 'all', 'true', 'course', 'Certificaat', '8', 'open']})
+                                                'CourseType', 'Completion', 'ProductType'],
+                                 'value': ['nl', 'no', 'all', 'true', 'course', 'Certificaat', 'open']})
 
     for new_column in fixed_values.columnname:
         course_information_springest[new_column] = fixed_values.loc[fixed_values.columnname == new_column, 'value'].values[0]

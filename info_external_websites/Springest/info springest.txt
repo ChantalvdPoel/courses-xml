@@ -1,0 +1,25 @@
+LOG-IN:
+https://aanbieders.springest.nl/
+Gebruikersnaam: anton.schutte@geo-ict.nl
+Wachtwoord: JelFieDia123$
+
+######################
+
+Contact via: datasupport@springest.nl
+
+-> zelf geen contact via hun gekregen, beter om een andere manier te zoeken als er hulp nodig is
+
+######################
+
+Op https://help.admin.springest.nl/category/603-aanbod-automatisch-importeren al veel hulpmiddelen te vinden voor het opzetten van de XML
+ 
+
+Op https://help.admin.springest.nl/article/1385-toelichting-velden-additionele-informatie is de toelichting van de nodes te vinden
+
+
+product_2_1.xsd (xml document): de xsd waar de gemaakte xml op moet kloppen 
+(op sites zoals https://xmlvalidation.com/ kan de XML tegen de XSD getest worden)
+
+product_example_2_1 (xml document): een xml bestand als voorbeeld van hoe het document er uit zou kunnen komen te zien
+
+

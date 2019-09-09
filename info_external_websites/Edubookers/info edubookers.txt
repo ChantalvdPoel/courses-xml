@@ -1,0 +1,15 @@
+LOG-IN:
+www.edubookers.com
+Gebruikersnaam: info@geoict.nl
+Wachtwoord: JelFieDia123$
+
+
+##########################
+
+Contact via sharon@edubookers.com
+
+##########################
+
+feed-example (XML bestand): xml voorbeeld van hoe het bestand eruit moet komen te zien
+
+Toelicht XML Edubookers (Excel bestand): toelichting op de nodes die in de xml moeten komen

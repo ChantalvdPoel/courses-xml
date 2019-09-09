@@ -1,0 +1,43 @@
+<trainings>
+    <training>
+        <training_id>23</training_id>
+        <training_type>open</training_type>
+        <training_name>Voorbeeld training</training_name>
+        <training_description><![CDATA[Beschrijving.</br>Met meerdere regels]]></training_description>
+        <training_days>2</training_days>
+        <training_additional_costs>23</training_additional_costs>
+        <training_additional_costs_description>Lunch en handouts</training_additional_costs_description>
+        <training_optional_costs>
+            <training_optional_cost>
+                <training_optional_name>Examen</training_optional_name>
+                <training_optional_price>50</training_optional_price>
+            </training_optional_cost>
+        </training_optional_costs>
+        <training_max_participants>8</training_max_participants>
+        <training_level>MBO</training_level>
+        <training_complete>Opleidercertificaat</training_complete>
+        <training_pe_points>12</training_pe_points>
+        <training_items>
+            <training_item>
+                <training_item_startassurance>true</training_item_startassurance>
+                <training_item_startdate>2016-01-11</training_item_startdate>
+                <training_item_time_start>08:30</training_item_time_start>
+                <training_item_time_end>16:30</training_item_time_end>
+                <training_item_followup>
+                    <training_item_followup_date>2016-01-12</training_item_followup_date>
+                    <training_item_followup_start>08:30</training_item_followup_start>
+                    <training_item_followup_end>16:30</training_item_followup_end>
+                </training_item_followup>
+                <training_item_location>Eindhoven</training_item_location>
+                <training_item_postalcode>5612 LX</training_item_postalcode>
+                <training_item_street>Bogert</training_item_street>
+                <training_item_streetnr>1</training_item_streetnr>
+                <training_item_price>110</training_item_price>
+                <training_item_discount>15</training_item_discount>
+                <training_item_discount_period_start>21</training_item_discount_period_start>
+                <training_item_discount_period_end>1</training_item_discount_period_end>
+                <training_item_final_seats>3</training_item_final_seats>
+            </training_item>
+        </training_items>
+    </training>
+</trainings>
