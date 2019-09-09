@@ -170,7 +170,7 @@ id;cursusnaam;tekst;datum;locatie
 102Ape2019-11-07;Google Bigdata Query;Google Bigdata Query: 7, 14, 21 november in Apeldoorn;7-11-2019;Apeldoorn
 102Ein2019-12-04;Google Bigdata Query;Google Bigdata Query: 4, 11, 18 december in Eindhoven;4-12-2019;Eindhoven
 102Rot2019-12-05;Google Bigdata Query;Google Bigdata Query: 5, 12, 19 december in Rotterdam;5-12-2019;Rotterdam
-123Ape2019-01-07;C++ Programmeren;C++ Programmeren: 7, 14, 21 januari in Apeldoorn;7-1-2019;Apeldoorn
+123Ape2019-01-07;C++ Programmeren;C++ Programmeren: 7, 21 januari in Apeldoorn;7-1-2019;Apeldoorn
 123Rot2019-02-04;C++ Programmeren;C++ Programmeren: 4, 11, 18 februari in Rotterdam;4-2-2019;Rotterdam
 123Ape2019-03-04;C++ Programmeren;C++ Programmeren: 4, 11, 18 maart in Apeldoorn;4-3-2019;Apeldoorn
 123Ams2019-03-05;C++ Programmeren;C++ Programmeren: 5, 12, 19 maart in Amsterdam;5-3-2019;Amsterdam
@@ -189,7 +189,7 @@ id;cursusnaam;tekst;datum;locatie
 123Ape2019-11-04;C++ Programmeren;C++ Programmeren: 4, 11, 18 november in Apeldoorn;4-11-2019;Apeldoorn
 123Ams2019-11-05;C++ Programmeren;C++ Programmeren: 5, 12, 19 november in Amsterdam;5-11-2019;Amsterdam
 123Rot2019-12-02;C++ Programmeren;C++ Programmeren: 2, 9, 16 december in Rotterdam;2-12-2019;Rotterdam
-125Ape2019-01-07;Delphi Programmeren;Delphi Programmeren: 7, 14, 21 januari in Apeldoorn;7-1-2019;Apeldoorn
+125Ape2019-01-07;Delphi Programmeren;Delphi Programmeren: 7, 21 januari in Apeldoorn;7-1-2019;Apeldoorn
 125Rot2019-02-04;Delphi Programmeren;Delphi Programmeren: 4, 11, 18 februari in Rotterdam;4-2-2019;Rotterdam
 125Ape2019-03-04;Delphi Programmeren;Delphi Programmeren: 4, 11, 18 maart in Apeldoorn;4-3-2019;Apeldoorn
 125Ams2019-03-05;Delphi Programmeren;Delphi Programmeren: 5, 12, 19 maart in Amsterdam;5-3-2019;Amsterdam
@@ -288,7 +288,7 @@ id;cursusnaam;tekst;datum;locatie
 082Ape2019-11-08;MapInfo Basis;MapInfo Basis: 8, 15, 22 november in Apeldoorn;8-11-2019;Apeldoorn
 082Ams2019-11-07;MapInfo Basis;MapInfo Basis: 7, 14, 21 november in Amsterdam;7-11-2019;Amsterdam
 082Rot2019-12-06;MapInfo Basis;MapInfo Basis: 6, 13, 20 december in Rotterdam;6-12-2019;Rotterdam
-023Ape2019-01-07;MicroStation 2D Basis;MicroStation 2D Basis: 7, 14, 21 januari in Apeldoorn;7-1-2019;Apeldoorn
+023Ape2019-01-07;MicroStation 2D Basis;MicroStation 2D Basis: 7, 21 januari in Apeldoorn;7-1-2019;Apeldoorn
 023Rot2019-02-04;MicroStation 2D Basis;MicroStation 2D Basis: 4, 11, 18 februari in Rotterdam;4-2-2019;Rotterdam
 023Ape2019-03-04;MicroStation 2D Basis;MicroStation 2D Basis: 4, 11, 18 maart in Apeldoorn;4-3-2019;Apeldoorn
 023Ape2019-03-21;MicroStation 2D Basis;MicroStation 2D Basis: 21, 28, 4 maart in Apeldoorn;21-3-2019;Apeldoorn
@@ -429,7 +429,7 @@ id;cursusnaam;tekst;datum;locatie
 111Ape2019-11-06;STATA;STATA: 6, 13, 20 november in Apeldoorn;6-11-2019;Apeldoorn
 111Rot2019-12-04;STATA;STATA: 4, 11, 18 december in Rotterdam;4-12-2019;Rotterdam
 111Rot2019-12-10;STATA;STATA: 10, 14, 17 december in Rotterdam;10-12-2019;Rotterdam
-072Ape2019-01-07;SuperMap 2D Basis;SuperMap 2D Basis: 7, 14, 21 januari in Apeldoorn;7-1-2019;Apeldoorn
+072Ape2019-01-07;SuperMap 2D Basis;SuperMap 2D Basis: 7, 21 januari in Apeldoorn;7-1-2019;Apeldoorn
 072Rot2019-02-04;SuperMap 2D Basis;SuperMap 2D Basis: 4, 11, 18 februari in Rotterdam;4-2-2019;Rotterdam
 072Ape2019-03-04;SuperMap 2D Basis;SuperMap 2D Basis: 4, 11, 18 maart in Apeldoorn;4-3-2019;Apeldoorn
 072Ams2019-03-05;SuperMap 2D Basis;SuperMap 2D Basis: 5, 12, 19 maart in Amsterdam;5-3-2019;Amsterdam
@@ -622,7 +622,7 @@ id;cursusnaam;tekst;datum;locatie
 020Ape2019-11-13;BricsCAD voor MicroStation kenners;BricsCAD voor MicroStation kenners: 13, 14 november in Apeldoorn;13-11-2019;Apeldoorn
 020Ein2019-12-10;BricsCAD voor MicroStation kenners;BricsCAD voor MicroStation kenners: 10, 11 december in Eindhoven;10-12-2019;Eindhoven
 020Rot2019-12-11;BricsCAD voor MicroStation kenners;BricsCAD voor MicroStation kenners: 11, 12 december in Rotterdam;11-12-2019;Rotterdam
-122Ape2019-01-07;C# Programmeren;C# Programmeren: 7, 14, 21 januari in Apeldoorn;7-1-2019;Apeldoorn
+122Ape2019-01-07;C# Programmeren;C# Programmeren: 7, 21 januari in Apeldoorn;7-1-2019;Apeldoorn
 122Rot2019-02-04;C# Programmeren;C# Programmeren: 4, 11, 18 februari in Rotterdam;4-2-2019;Rotterdam
 122Ape2019-03-04;C# Programmeren;C# Programmeren: 4, 11, 18 maart in Apeldoorn;4-3-2019;Apeldoorn
 122Ams2019-03-05;C# Programmeren;C# Programmeren: 5, 12, 19 maart in Amsterdam;5-3-2019;Amsterdam
@@ -640,7 +640,7 @@ id;cursusnaam;tekst;datum;locatie
 122Ape2019-11-04;C# Programmeren;C# Programmeren: 4, 11, 18 november in Apeldoorn;4-11-2019;Apeldoorn
 122Ams2019-11-05;C# Programmeren;C# Programmeren: 5, 12, 19 november in Amsterdam;5-11-2019;Amsterdam
 122Rot2019-12-02;C# Programmeren;C# Programmeren: 2, 9, 16 december in Rotterdam;2-12-2019;Rotterdam
-122Rot2019-12-04;C# Programmeren;C# Programmeren: 4, 18 december in Rotterdam;4-12-2019;Rotterdam
+122Rot2019-12-04;C# Programmeren;C# Programmeren: 4, 11, 18 december in Rotterdam;4-12-2019;Rotterdam
 105Ape2019-01-08;Pyspark met apache;Pyspark met apache: 8, 9 januari in Apeldoorn;8-1-2019;Apeldoorn
 105Rot2019-02-05;Pyspark met apache;Pyspark met apache: 5, 6 februari in Rotterdam;5-2-2019;Rotterdam
 105Ape2019-03-05;Pyspark met apache;Pyspark met apache: 5, 6 maart in Apeldoorn;5-3-2019;Apeldoorn
@@ -1215,7 +1215,7 @@ id;cursusnaam;tekst;datum;locatie
 098Ape2019-11-04;PostGIS en PostgreSQL;PostGIS en PostgreSQL: 4, 11, 18 november in Apeldoorn;4-11-2019;Apeldoorn
 098Ams2019-11-05;PostGIS en PostgreSQL;PostGIS en PostgreSQL: 5, 12, 19 november in Amsterdam;5-11-2019;Amsterdam
 098Rot2019-12-02;PostGIS en PostgreSQL;PostGIS en PostgreSQL: 2, 9, 16 december in Rotterdam;2-12-2019;Rotterdam
-059Ape2019-01-07;ArcGIS Pro 2D Basis;ArcGIS Pro 2D Basis: 7, 14, 21 januari in Apeldoorn;7-1-2019;Apeldoorn
+059Ape2019-01-07;ArcGIS Pro 2D Basis;ArcGIS Pro 2D Basis: 7, 21 januari in Apeldoorn;7-1-2019;Apeldoorn
 059Rot2019-02-04;ArcGIS Pro 2D Basis;ArcGIS Pro 2D Basis: 4, 11, 18 februari in Rotterdam;4-2-2019;Rotterdam
 059Ape2019-03-04;ArcGIS Pro 2D Basis;ArcGIS Pro 2D Basis: 4, 11, 18 maart in Apeldoorn;4-3-2019;Apeldoorn
 059Ams2019-03-05;ArcGIS Pro 2D Basis;ArcGIS Pro 2D Basis: 5, 12, 19 maart in Amsterdam;5-3-2019;Amsterdam
@@ -1455,12 +1455,12 @@ id;cursusnaam;tekst;datum;locatie
 178Ein2019-10-08;Python Anaconda Datascience;Python Anaconda Datascience: 8, 15, 22 oktober in Eindhoven;8-10-2019;Eindhoven
 178Ape2019-09-04;Python Anaconda Datascience;Python Anaconda Datascience: 4, 11, 18 september in Apeldoorn;4-9-2019;Apeldoorn
 178Ams2019-09-03;Python Anaconda Datascience;Python Anaconda Datascience: 3, 10, 17 september in Amsterdam;3-9-2019;Amsterdam
-103Ape2019-01-21;Leergang Data-analyse en GIS;Leergang Data-analyse en GIS: 21, 22, 23, 24, 28, 29, 30, 31 januari 2020 in Apeldoorn;21-1-2020;Apeldoorn
-103Ape2019-03-17;Leergang Data-analyse en GIS;Leergang Data-analyse en GIS: 17, 18, 19, 20, 24, 25, 26, 27 maart 2020 in Apeldoorn;17-3-2020;Apeldoorn
-103Ape2019-05-19;Leergang Data-analyse en GIS;Leergang Data-analyse en GIS: 19, 20, 21, 22, 26, 27, 28, 29 mei 2020 in Apeldoorn;19-5-2020;Apeldoorn
-103Ape2019-07-07;Leergang Data-analyse en GIS;Leergang Data-analyse en GIS: 7, 8, 9, 10, 14, 15, 16, 17 juli 2020 in Apeldoorn;7-7-2020;Apeldoorn
-103Ape2019-09-15;Leergang Data-analyse en GIS;Leergang Data-analyse en GIS: 15, 16, 17, 18, 22, 23, 24, 25 september 2020 in Apeldoorn;15-9-2020;Apeldoorn
-103Ape2019-11-17;Leergang Data-analyse en GIS;Leergang Data-analyse en GIS: 17, 18, 19, 20, 24, 25, 26, 27 november 2020 in Apeldoorn;17-11-2020;Apeldoorn
+103Ape2020-01-21;Leergang Data-analyse en GIS;Leergang Data-analyse en GIS: 21, 22, 23, 24, 28, 29, 30, 31 januari in Apeldoorn;21-1-2020;Apeldoorn
+103Ape2020-03-17;Leergang Data-analyse en GIS;Leergang Data-analyse en GIS: 17, 18, 19, 20, 24, 25, 26, 27 maart in Apeldoorn;17-3-2020;Apeldoorn
+103Ape2020-05-19;Leergang Data-analyse en GIS;Leergang Data-analyse en GIS: 19, 20, 21, 22, 26, 27, 28, 29 mei in Apeldoorn;19-5-2020;Apeldoorn
+103Ape2020-07-07;Leergang Data-analyse en GIS;Leergang Data-analyse en GIS: 7, 8, 9, 10, 14, 15, 16, 17 juli in Apeldoorn;7-7-2020;Apeldoorn
+103Ape2020-09-15;Leergang Data-analyse en GIS;Leergang Data-analyse en GIS: 15, 16, 17, 18, 22, 23, 24, 25 september in Apeldoorn;15-9-2020;Apeldoorn
+103Ape2020-11-17;Leergang Data-analyse en GIS;Leergang Data-analyse en GIS: 17, 18, 19, 20, 24, 25, 26, 27 november in Apeldoorn;17-11-2020;Apeldoorn
 166Ape2019-10-05;Leergang Medewerker Landmeetkunde;Leergang Medewerker Landmeetkunde: 5, 12, 19, 26 oktober in Apeldoorn;5-10-2019;Apeldoorn
 166Ape2019-07-06;Leergang Medewerker Landmeetkunde;Leergang Medewerker Landmeetkunde: 6, 13, 20, 27 juli in Apeldoorn;6-7-2019;Apeldoorn
 166Ape2019-05-04;Leergang Medewerker Landmeetkunde;Leergang Medewerker Landmeetkunde: 4, 11, 18, 25 mei in Apeldoorn;4-5-2019;Apeldoorn
@@ -1566,4 +1566,4 @@ id;cursusnaam;tekst;datum;locatie
 146_opafroep;Workshop 3D Geo-Informatie;op afroep;31-12-2099;
 184_opafroep;Workshop BIM;op afroep;31-12-2099;
 147_opafroep;Workshop Geo-info en Landmeten;op afroep;31-12-2099;
-;Leergang Hydrografie - CAT B Gecertificeerd;Leergang Hydrografie - CAT B Gecertificeerd: najaar 2019;1-11-2019;
+165_hydro;Leergang Hydrografie - CAT B Gecertificeerd;najaar 2019;1-11-2019;

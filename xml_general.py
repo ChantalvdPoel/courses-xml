@@ -33,10 +33,6 @@ def read_course_planning(directory, filename):
     course_planning = pd.read_excel(os.path.join(directory, filename),
                                     sheet_name = 'planning',
                                     dtype = str)
-    
-    # Convert date notation
-    #date_to_datetime = [datetime.strptime(str(course_planning.Datum[idx]), '%d-%m-%Y') for idx in range(len(course_planning))]
-    #course_planning.Datum = [date_to_datetime[idx].strftime('%Y-%m-%d') for idx in range(len(date_to_datetime))]
 
     # Convert time notation
     for tijd in ['Begintijd', 'Eindtijd']:

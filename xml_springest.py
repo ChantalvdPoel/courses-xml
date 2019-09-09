@@ -2,6 +2,7 @@
 from lxml import etree
 import pandas as pd
 from datetime import datetime
+import os
 
 import xml_general
 
@@ -35,7 +36,7 @@ def course_information_format_springest(course_information_df):
         course_information_springest[new_column] = fixed_values.loc[fixed_values.columnname == new_column, 'value'].values[0]
 
     # add columns that need a bit of calculation
-    course_information_springest['VatAmount'] = course_information_springest.Price.apply(lambda x: str(int(x)*0.21)) # adds the amount of VAT (BTW)
+    course_information_springest['VatAmount'] = course_information_springest.Price.apply(lambda x: str(round((int(x)*0.21),2))) # adds the amount of VAT (BTW)
 
     for rows in range(len(course_information_springest)): # add the duration unit based on the Dutch value (dagen of weken)
         if course_information_springest.loc[rows, 'Duration_unit'] == 'dagen':
@@ -92,13 +93,13 @@ def springest_create_schedules(parent, local_ID, table_info, table_planning, dur
         new_event_ID.text = local_ID
 
         new_event_startdate = etree.SubElement(new_event_child, 'Startdate')
-        new_event_startdate.text = str(table_planning.loc[table_planning.RowID == startdays_list[i], 'Date'].values[0])
+        new_event_startdate.text = str(table_planning.loc[table_planning.RowID == startdays[i], 'Date'].values[0])
 
         new_event_enddate = etree.SubElement(new_event_child, 'Enddate')
-        new_event_enddate.text = str(table_planning.loc[table_planning.RowID == str(int(startdays_list[i]) + int(duration) - 1), 'Date'].values[0])
+        new_event_enddate.text = str(table_planning.loc[table_planning.RowID == str(int(startdays[i]) + int(duration) - 1), 'Date'].values[0])
 
         new_event_place = etree.SubElement(new_event_child, 'Place')
-        new_event_place.text = str(table_planning.loc[table_planning.RowID == startdays_list[i], 'Place'].values[0])
+        new_event_place.text = str(table_planning.loc[table_planning.RowID == startdays[i], 'Place'].values[0])
 
         new_event_startdateismonth = etree.SubElement(new_event_child, 'StartdateIsMonthOnly')
         new_event_startdateismonth.text = 'false'
@@ -117,7 +118,7 @@ def springest_create_schedules(parent, local_ID, table_info, table_planning, dur
                                                       schedule_information = colname, 
                                                       daynumber = days,
                                                       table = table_planning,
-                                                      startday_index = startdays_list[i])
+                                                      startday_index = startdays[i])
             name_courseday = etree.Element('Name')
             name_courseday.text = etree.CDATA('Cursusdag ' + str(days+1))
             new_courseday.insert(3, name_courseday)
@@ -172,7 +173,7 @@ def create_xml_springest(course_information_df, course_planning_df, output_direc
             startdays_list = course_planning_df.loc[(course_planning_df.ID == coursenumber) & (course_planning_df.Day == '1'),'RowID'].reset_index(drop=True) # list of all the startdays of that course
             amount_startdays = len(startdays_list) # amount of startdays of that course
             # Create the schedules of the product
-            create_schedules(parent = new_event,
+            springest_create_schedules(parent = new_event,
                             local_ID = coursenumber,
                             table_info = course_information_df,
                             table_planning = course_planning_df,
