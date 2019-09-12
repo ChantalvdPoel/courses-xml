@@ -14,10 +14,7 @@ def read_course_information(directory, filename):
     """
     course_information = pd.read_excel(os.path.join(directory, filename),
                                        sheet_name = 'cursussen',
-                                       dtype=str,
-                                       usecols = ['CursusID', 'Cursusnaam', 'Omschrijving', 'Prijs',
-                                                  'Extra_kosten', 'Omschrijving_extra_kosten', 'Duur', 
-                                                  'Duur_eenheid', 'URL', 'PDF_URL', 'Frequentie', 'Max_deelnemers'])
+                                       dtype=str)
     course_information.fillna(0, inplace = True)
 
     return course_information
@@ -41,11 +38,14 @@ def read_course_planning(directory, filename):
 
     return course_planning
 
-def add_product_information(parent, local_ID, information_type, table):
+def add_product_information(parent, local_ID, information_type, table, edubookers = False):
     """
     This function will create nodes with the course information
     """
-    new_product_information = etree.SubElement(parent, information_type) # create the new node
+    if edubookers:
+        new_product_information = etree.SubElement(parent, 'training_'+information_type.lower()) # create the new node
+    else:
+        new_product_information = etree.SubElement(parent, information_type) # create the new node
     new_product_information.text = str(table[table.ID == local_ID][information_type].values[0]) # indexing based on the unique course ID number
 
 def add_courseday_information(parent, schedule_information, daynumber, table, startday_index):
