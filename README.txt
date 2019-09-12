@@ -29,19 +29,16 @@ Overige bestanden:
 - Cursussen database
 	de centrale database met zowel de cursusinformatie als de planning
 
-- database_to_outputfiles
+- main
 	het hoofdbestand waarvan uit de CSV en de XML bestanden worden gemaakt
+	voer dit script uit om de bestanden te maken
 
-- xml_general
-	python functies die op meerdere plekken gebruikt kunnen worden
-
-- xml_springest
-	python functies die specifiek zijn voor het maken van de Springest XML
-
+- functions
+	alle functies die gebruikt worden om de bestanden te maken, nodig om main.py uit te kunnen voeren
 
 ###############################################################
 
-Stand van zaken:
+Stand van zaken
 
 Wat moet er nog gebeuren:
 
@@ -58,6 +55,10 @@ Wat moet er nog gebeuren:
 	Dit was nog niet duidelijk hoe dit voor elke cursus ingevuld moet worden
 	Niet standaard startgarantie, maar wel als er minimaal 2 deelnemers staan ingeschreven
 	Bij 1 deelnemer kan de cursus soms niet doorgaan of op een ander moment
+
+- Vaste waarden
+	Er kan nog eens goed naar gekeken worden naar de vaste waarden die nu hardcoded erin worden gezet
+	Misschien dat deze waarden bij een aantal cursussen kunnen afwijken.
 
 
 

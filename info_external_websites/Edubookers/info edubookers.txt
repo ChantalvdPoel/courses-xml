@@ -8,6 +8,8 @@ Wachtwoord: JelFieDia123$
 
 Contact via sharon@edubookers.com
 
+Bij afwezigheid van Sharon contact gehad met Luuk Hoeben (luuk@edubookers.com)
+
 ##########################
 
 feed-example (XML bestand): xml voorbeeld van hoe het bestand eruit moet komen te zien
