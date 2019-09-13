@@ -590,3 +590,33 @@ def create_xml_website(information_df, planning_df, output_directory, output_fil
     write_to_xml(root = root,
                  output_directory = output_directory,
                  output_filename = output_filename)
+
+def check_database(information_df, planning_df):
+    # Checks the database if the data is correct
+
+    # All columns that are necessary
+    necessary_cols_info = ['Cursusnaam', 'CursusID', 'SpringestID', 'Omschrijving', 'Categorie', 'Onderwerp', 
+                      'Duur', 'Duur_eenheid', 'Prijs', 'Extra_kosten', 'Omschrijving_extra_kosten', 'URL', 'PDF_URL']
+    necessary_cols_planning = ['RowID', 'EventID', 'CursusID', 'Cursusnaam', 'Locatie', 'Dag', 'Datum', 'Begintijd', 'Eindtijd']
+
+    # All columns that are in the database
+    course_information_cols = information_df.columns.tolist()
+    course_planning_cols = planning_df.columns.tolist()
+
+    if all(elem in course_information_cols for elem in necessary_cols_info): # check if all necessary columns are present in the course information
+        for col in necessary_cols_info:
+            if (col != 'Extra_kosten') & (col != 'Omschrijving_extra_kosten'): # nog necessary to have additional costs
+                if information_df.loc[:,col].isin([0]).any(): # check if there are any empty values (zeros)
+                    raise ValueError('Er missen waarden voor deze kolom: ' + col) # if there are zeros, tell in which column
+    else:
+        missing = list(set(necessary_cols_info) - set(course_information_cols)) # if there are columns missing, tell which ones
+        raise ValueError('Er missen kolommen in de cursusinformatie, namelijk: ' + str(missing))
+
+
+    if all(elem in course_planning_cols for elem in necessary_cols_planning): # check if all necessary columns are present in the planning
+        for col in necessary_cols_planning:
+            if planning_df.loc[:,col].isin([0]).any(): # check if there any empty values (zeros)
+                raise ValueError('Er missen waarden voor deze kolom: ' + col) # if there are zeros, tell in which column
+    else:
+        missing = list(set(necessary_cols_planning) - set(course_planning_cols)) # if there are columns missing, tell which ones
+        raise ValueError('Er missen kolommen in de cursusinformatie, namelijk: ' + str(missing))

@@ -5122,6 +5122,10 @@
     <Duration>4</Duration>
     <DurationUnit>days</DurationUnit>
     <WebAddress>https://geo-ict.nl/cursussen/cad/autocad-2d-basis/</WebAddress>
+    <PdfBrochure>https://geo-ict.nl/download/22735/</PdfBrochure>
+    <ScheduleType>scheduled</ScheduleType>
+    <Discounts/>
+    <RequiredUserFields/>
     <LiveSessions>
       <LiveSession>
         <ID>EVENT_002Ape2019-01-09</ID>
@@ -5684,9 +5688,6 @@
         </LiveSessionDates>
       </LiveSession>
     </LiveSessions>
-    <ScheduleType>scheduled</ScheduleType>
-    <Discounts/>
-    <RequiredUserFields/>
   </Product>
   <Product>
     <ID>COURSE_001</ID>
@@ -5707,6 +5708,10 @@
     <Duration>3</Duration>
     <DurationUnit>days</DurationUnit>
     <WebAddress>https://geo-ict.nl/cursussen/cad/autocad-2d-basis-atc-certificaat/</WebAddress>
+    <PdfBrochure>https://geo-ict.nl/download/22725/</PdfBrochure>
+    <ScheduleType>scheduled</ScheduleType>
+    <Discounts/>
+    <RequiredUserFields/>
     <LiveSessions>
       <LiveSession>
         <ID>EVENT_001Rot2019-02-06</ID>
@@ -6123,9 +6128,6 @@
         </LiveSessionDates>
       </LiveSession>
     </LiveSessions>
-    <ScheduleType>scheduled</ScheduleType>
-    <Discounts/>
-    <RequiredUserFields/>
   </Product>
   <Product>
     <ID>COURSE_003</ID>

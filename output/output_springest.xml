@@ -7253,8 +7253,17 @@
     <MaxParticipants>8</MaxParticipants>
     <ParticipantsAgreement/>
     <WebAddress>https://geo-ict.nl/cursussen/cad/autocad-2d-basis/</WebAddress>
-    <ProductType>open</ProductType>
+    <PdfBrochure>https://geo-ict.nl/download/22735/</PdfBrochure>
     <ContactPerson/>
+    <ProductType>open</ProductType>
+    <AllowedSites/>
+    <Regions/>
+    <Level/>
+    <CrohoID/>
+    <CreboID/>
+    <PriceDiscounts/>
+    <PePoints/>
+    <Moments/>
     <StartingDatePlaces>
       <StartingDatePlace>
         <ID>002Ape2019-01-09</ID>
@@ -8037,14 +8046,6 @@
         </Schedule>
       </StartingDatePlace>
     </StartingDatePlaces>
-    <AllowedSites/>
-    <Regions/>
-    <Level/>
-    <CrohoID/>
-    <CreboID/>
-    <PriceDiscounts/>
-    <PePoints/>
-    <Moments/>
     <CustomLtiParams/>
   </Product>
   <Product>
@@ -8074,8 +8075,17 @@
     <MaxParticipants>8</MaxParticipants>
     <ParticipantsAgreement/>
     <WebAddress>https://geo-ict.nl/cursussen/cad/autocad-2d-basis-atc-certificaat/</WebAddress>
-    <ProductType>open</ProductType>
+    <PdfBrochure>https://geo-ict.nl/download/22725/</PdfBrochure>
     <ContactPerson/>
+    <ProductType>open</ProductType>
+    <AllowedSites/>
+    <Regions/>
+    <Level/>
+    <CrohoID/>
+    <CreboID/>
+    <PriceDiscounts/>
+    <PePoints/>
+    <Moments/>
     <StartingDatePlaces>
       <StartingDatePlace>
         <ID>001Rot2019-02-06</ID>
@@ -8654,14 +8664,6 @@
         </Schedule>
       </StartingDatePlace>
     </StartingDatePlaces>
-    <AllowedSites/>
-    <Regions/>
-    <Level/>
-    <CrohoID/>
-    <CreboID/>
-    <PriceDiscounts/>
-    <PePoints/>
-    <Moments/>
     <CustomLtiParams/>
   </Product>
   <Product>

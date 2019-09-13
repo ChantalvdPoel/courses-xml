@@ -7,6 +7,8 @@ Wachtwoord: JelFieDia123$
 
 Contact via: opleidersupport@studytube.nl
 
+Gebeld door: +31 20 779 6994
+
 ################################
 
 trainings_template (xml document): voorbeeld van het XML bestand 
